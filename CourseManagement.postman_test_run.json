@@ -1,0 +1,308 @@
+{
+	"id": "8256cfc1-d73d-402d-a1b3-0eb8f61e6594",
+	"name": "COURSES",
+	"timestamp": "2022-10-08T10:10:17.168Z",
+	"collection_id": "23070794-2491392e-5a4e-4a3b-a374-4b00502c4901",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 55,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5e09a56a-873b-438a-af38-9c4e3997b766",
+			"name": "CREATE COURSE",
+			"time": 173,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches title": true,
+				"Body matches description": true,
+				"Body matches location": true,
+				"Body matches catogoryId": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches title": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches description": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches location": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches catogoryId": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				702,
+				186,
+				161,
+				185,
+				173
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches title": true,
+					"Body matches description": true,
+					"Body matches location": true,
+					"Body matches catogoryId": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches title": true,
+					"Body matches description": true,
+					"Body matches location": true,
+					"Body matches catogoryId": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches title": true,
+					"Body matches description": true,
+					"Body matches location": true,
+					"Body matches catogoryId": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches title": true,
+					"Body matches description": true,
+					"Body matches location": true,
+					"Body matches catogoryId": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches title": true,
+					"Body matches description": true,
+					"Body matches location": true,
+					"Body matches catogoryId": true
+				}
+			]
+		},
+		{
+			"id": "b7ab18fb-965e-4ecd-a9f3-e82786234198",
+			"name": "LIST COURSES",
+			"time": 172,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				177,
+				205,
+				179,
+				188,
+				172
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5695a9b7-ee15-499f-aa97-2d2478cd4dd4",
+			"name": "GET COURSE",
+			"time": 193,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ispremium": true,
+				"body matches description": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches ispremium": {
+					"pass": 5,
+					"fail": 0
+				},
+				"body matches description": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				189,
+				166,
+				201,
+				177,
+				193
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ispremium": true,
+					"body matches description": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ispremium": true,
+					"body matches description": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ispremium": true,
+					"body matches description": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ispremium": true,
+					"body matches description": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ispremium": true,
+					"body matches description": true
+				}
+			]
+		},
+		{
+			"id": "74497a07-b90e-42a7-8899-3df1ca96ff9f",
+			"name": "UPDATE COURSE",
+			"time": 175,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				213,
+				176,
+				169,
+				161,
+				175
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9230a751-0fa2-41d8-9e53-15786ff6b70a",
+			"name": "DELETE COURSE",
+			"time": 176,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				164,
+				189,
+				190,
+				166,
+				176
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 5033,
+	"collection": {
+		"requests": [
+			{
+				"id": "5e09a56a-873b-438a-af38-9c4e3997b766",
+				"method": "POST"
+			},
+			{
+				"id": "b7ab18fb-965e-4ecd-a9f3-e82786234198",
+				"method": "GET"
+			},
+			{
+				"id": "5695a9b7-ee15-499f-aa97-2d2478cd4dd4",
+				"method": "GET"
+			},
+			{
+				"id": "74497a07-b90e-42a7-8899-3df1ca96ff9f",
+				"method": "PUT"
+			},
+			{
+				"id": "9230a751-0fa2-41d8-9e53-15786ff6b70a",
+				"method": "DELETE"
+			}
+		]
+	}
+}

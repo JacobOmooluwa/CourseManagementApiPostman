@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "2491392e-5a4e-4a3b-a374-4b00502c4901",
+		"name": "COURSES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23070794"
+	},
+	"item": [
+		{
+			"name": "CREATE COURSE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const JsonResponse = pm.response.json();\r",
+							"pm.globals.set(\"courseid\" , JsonResponse.id);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches title\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Jacob Postman\");\r",
+							"});\r",
+							"pm.test(\"Body matches description\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"introduction to postman\");\r",
+							"});\r",
+							"pm.test(\"Body matches location\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"online\");\r",
+							"});\r",
+							"pm.test(\"Body matches catogoryId\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"2\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Jacob Postman\",\n    \"categoryId\": 2,\n    \"description\": \"introduction to postman\",\n    \"courseUrl\": \"https://www.youtube.com/watch?v=8vXoMqWgbQQ\",\n    \"imageUrl\": \"https://source.unsplash.com/user/c_v_r/900x800\",\n    \"location\": \"online\",\n    \"isPremium\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/courses/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST COURSES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/courses",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET COURSE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches ispremium\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"false\");\r",
+							"});\r",
+							"pm.test(\"body matches description\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"introduction to postman\");\r",
+							"});\r",
+							"pm.variables.get(\"courseid\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/courses/{{courseid}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						"{{courseid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE COURSE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"new jacob postman\",\n    \"categoryId\" : 2,\n    \"description\" : \"description description description\",\n    \"courseUrl\" : \"London Lagos Los Angeles\",\n    \"imageUrl\" : \"https://source.unsplash.com/user/c_v_r/900x800\",\n    \"location\": \"offline\",\n    \"isPremium\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/courses/{{courseid}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"courses",
+						"{{courseid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE COURSE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://notification-service.ishchoolapi.xyz/api/courses/{{courseid}}",
+					"protocol": "https",
+					"host": [
+						"notification-service",
+						"ishchoolapi",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"courses",
+						"{{courseid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
